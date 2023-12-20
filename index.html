@@ -5,47 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      var currentYear = new Date().getFullYear();
+      const cityText = "Це столиця";
+      const sportText = "Круто! Хочеш стати";
+      const currentYear = new Date().getFullYear();
 
-      var birthYear = prompt("Вкажіть ваш рік народження?");
-      var age = "";
+      let birthYear = prompt("Вкажіть ваш рік народження?");
+      let age = "";
       if (birthYear !== null && birthYear !== "") {
         age = currentYear - parseInt(birthYear);
       }
 
-      var message1 =
+      let message1 =
         birthYear === null || birthYear === ""
           ? "1. Шкода, що ви не захотіли вказати інформацію про свій рік народження."
           : "1. Ваш вік: " + age;
 
-      var city = prompt("Вкажіть місто, в якому ви проживаєте?");
-      var cityMessage = "";
+      let city = prompt("Вкажіть місто, в якому ви проживаєте?");
+      let cityMessage = "";
       if (city !== null && city !== "") {
         if (city.toLowerCase() === "київ") {
-          cityMessage = "Це столиця України!";
+          cityMessage = cityText + " України!";
         } else if (city.toLowerCase() === "лондон") {
-          cityMessage = "Це столиця Великої Британії!";
+          cityMessage = cityText + " Великої Британії!";
         } else if (city.toLowerCase() === "вашингтон") {
-          cityMessage = "Це столиця Сполучених Штатів!";
+          cityMessage = cityText + " Сполучених Штатів!";
         }
       }
-      var message2 =
+      let message2 =
         city === null || city === ""
           ? "2. Шкода, що ви не захотіли вказати інформацію про місто, в якому проживаєте."
           : "2. Ви проживаєте у місті " + city + ". " + cityMessage;
 
-      var favoriteSport = prompt("Вкажіть ваш улюблений вид спорту?");
-      var sportMessage = "";
+      let favoriteSport = prompt("Вкажіть ваш улюблений вид спорту?");
+      let sportMessage = "";
       if (favoriteSport !== null && favoriteSport !== "") {
         if (favoriteSport.toLowerCase() === "бокс") {
-          sportMessage = " Круто! Хочеш стати Кличком Володимиром?";
+          sportMessage = sportText + " Кличком Володимиром?";
         } else if (favoriteSport.toLowerCase() === "футбол") {
-          sportMessage = " Круто! Хочеш стати Андрієм Ярмоленком?";
+          sportMessage = sportText + " Андрієм Ярмоленком?";
         } else if (favoriteSport.toLowerCase() === "теніс") {
-          sportMessage = " Круто! Хочеш стати Роджером Федерером?";
+          sportMessage = sportText + " Роджером Федерером?";
         }
       }
-      var message3 =
+      let message3 =
         favoriteSport === null || favoriteSport === ""
           ? "3. Шкода, що ви не захотіли вказати інформацію про свій улюблений вид спорту."
           : "3. Ваш улюблений вид спорту: " +
