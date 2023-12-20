@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var currentYear = new Date().getFullYear();
+
+      var birthYear = prompt("Вкажіть ваш рік народження?");
+      var age = "";
+      if (birthYear !== null && birthYear !== "") {
+        age = currentYear - parseInt(birthYear);
+      }
+
+      var message1 =
+        birthYear === null || birthYear === ""
+          ? "1. Шкода, що ви не захотіли вказати інформацію про свій рік народження."
+          : "1. Ваш вік: " + age;
+
+      var city = prompt("Вкажіть місто, в якому ви проживаєте?");
+      var cityMessage = "";
+      if (city !== null && city !== "") {
+        if (city.toLowerCase() === "київ") {
+          cityMessage = "Це столиця України!";
+        } else if (city.toLowerCase() === "лондон") {
+          cityMessage = "Це столиця Великої Британії!";
+        } else if (city.toLowerCase() === "вашингтон") {
+          cityMessage = "Це столиця Сполучених Штатів!";
+        }
+      }
+      var message2 =
+        city === null || city === ""
+          ? "2. Шкода, що ви не захотіли вказати інформацію про місто, в якому проживаєте."
+          : "2. Ви проживаєте у місті " + city + ". " + cityMessage;
+
+      var favoriteSport = prompt("Вкажіть ваш улюблений вид спорту?");
+      var sportMessage = "";
+      if (favoriteSport !== null && favoriteSport !== "") {
+        if (favoriteSport.toLowerCase() === "бокс") {
+          sportMessage = " Круто! Хочеш стати Кличком Володимиром?";
+        } else if (favoriteSport.toLowerCase() === "футбол") {
+          sportMessage = " Круто! Хочеш стати Андрієм Ярмоленком?";
+        } else if (favoriteSport.toLowerCase() === "теніс") {
+          sportMessage = " Круто! Хочеш стати Роджером Федерером?";
+        }
+      }
+      var message3 =
+        favoriteSport === null || favoriteSport === ""
+          ? "3. Шкода, що ви не захотіли вказати інформацію про свій улюблений вид спорту."
+          : "3. Ваш улюблений вид спорту: " +
+            favoriteSport +
+            ". " +
+            sportMessage;
+
+      if (
+        (birthYear === null || birthYear === "") &&
+        (city === null || city === "") &&
+        (favoriteSport === null || favoriteSport === "")
+      ) {
+        alert(
+          "Шкода, що ви не захотіли вказати інформацію про свій рік народження, місто в якому проживаєте та свій улюблений вид спорту."
+        );
+      } else {
+        alert(message1 + "\n" + message2 + "\n" + message3);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
